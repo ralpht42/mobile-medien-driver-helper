@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://edgestatic.azureedge.net/welcome/static/favicon.png"
+    />
+    <link rel="stylesheet" href="bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
+    />
+    <!--
+      <link rel="manifest" href="./manifest.json">
+    -->
+    <title>Driver Helper</title>
+  </head>
+  <body>
+    <div class="column is-4 is-offset-4">
+      <div class="container has-text-centered">
+        <h1 class="title">Driver Helper</h1>
+        <p class="subtitle">
+          Daten für die Berechnung des Treibstoffverbrauchs eingeben:
+        </p>
+      </div>
+      <div class="box">
+        <form class="container">
+          <div class="field">
+            <label class="label" for="input-start">Start [km]:</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                id="input-start"
+                name="input-start"
+                value="10000"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="input-stop">Stop [km]:</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                id="input-stop"
+                name="input-stop"
+                value="11000"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="input-fuel">Tanken [l]:</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                id="input-fuel"
+                name="input-fuel"
+                value="50"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="input-costs">Kosten [€]:</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                id="input-costs"
+                name="input-costs"
+                value="60"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="costs-for-100km">Kosten für 100km</label>
+            <div class="control">
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="costs-for-100km"
+                name="costs-for-100km"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button
+                class="button is-primary"
+                type="button"
+                id="button-calculate"
+              >
+                Berechnen
+              </button>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="output-consumption"
+              >Verbrauch [l/100km]:</label
+            >
+            <div class="control">
+              <output
+                class="output"
+                name="output-consumption"
+                id="output-consumption"
+              ></output>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="output-costs">Kosten [€/100km]:</label>
+            <div class="control">
+              <output
+                class="output"
+                name="output-costs"
+                id="output-costs"
+              ></output>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./converter.js"></script>
+    <!--
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js", { scope: "./" });
+      }
+    </script>
+    -->
+  </body>
+</html>
